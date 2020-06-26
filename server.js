@@ -33,7 +33,7 @@ app.all("*", (req, res) => {
  
 
 // @desc       read port number from config file and start server
-const port = process.env.PORT || 5000
+const port = process.env.PORT || 5001
 const server = app.listen(port, () => {
 
      console.log("Server is started at port",port)
