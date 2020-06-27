@@ -1,7 +1,7 @@
 const express = require('express')
 const dotenv = require('dotenv')
 const connectDb = require('./utils/database')
-
+const cors = require('cors')
 const app = express()
 
 // @desc       importing different routes
@@ -17,6 +17,9 @@ connectDb();
 
 // @desc       using body parser
 app.use(express.json());
+
+// @desc       allow cross origin policy
+app.use(cors())
 
 // @desc       routes
 app.use('/user', userRoute);
