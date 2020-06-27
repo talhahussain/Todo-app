@@ -45,6 +45,8 @@ exports.signup = asyncHandler(async (req, res) => {
           // 2) Save for the password hash
           await user.save({validateBeforeSave: false})
 
+          // (Can send email confirmation here, not doing now)
+
           // 3) Send success status if successful
           res.status(201).json({
                status: "Success",
